@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2em;
+  background-color: #f4f7f9;
+  color: #333;
+  font-size: 0.9em;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #6FA843;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: #6FA843;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 2em;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  
+}
+th {
+  /*text-align: left;*/
+  font-weight: 100;
+  vertical-align: middle !important;
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #EEE;
+  vertical-align: top;
+}
+/*tr td:first-child, tr td:last-child {    white-space: nowrap;}*/
+
+tbody tr:nth-child(even) {
+  background-color: #eaf5e6;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+thead {
+  background-color: #6FA843;
+  color: white;
+}
+
+.table-interne thead {
+  background-color: #444;
+}
+
+.table-admin thead {
+  background-color: #888;
+}
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  header h1, section h2 {
+    color: black;
+  }
+
+  table {
+    box-shadow: none;
+  }
+
+  th, td {
+    /*border: 1px solid #000;*/
+  }
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1em;
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    padding: 10px;
+    border: none;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #6FA843;
+  }
+}
